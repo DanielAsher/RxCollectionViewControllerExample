@@ -1,2 +1,5 @@
 Carthage/Build
-CollectionViewExample.xcodeproj/xcuserdata
+xcuserdata/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
