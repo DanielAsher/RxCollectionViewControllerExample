@@ -1,5 +1,5 @@
 //
-//  CollectionViewController.swift
+//  SectionedCollectionViewController.swift
 //  CollectionViewExample
 //
 //  Created by Daniel Asher on 02/03/2017.
@@ -9,12 +9,32 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 private let reuseIdentifier = "GameCell"
 
-class CollectionViewController: UICollectionViewController {
+struct GameSection {
+    var header: String
+    var items: [Item]
+}
+extension GameSection : SectionModelType {
+    typealias Item = GameInfo
+    
+    var identity: String {
+        return header
+    }
+    
+    init(original: GameSection, items: [Item]) {
+        self = original
+        self.items = items
+    }
+}
+
+class SectionedCollectionViewController: UICollectionViewController {
 
     var disposeBag = DisposeBag()
+   
+    var dataSource: RxCollectionViewSectionedReloadDataSource<GameSection>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +42,29 @@ class CollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         collectionView!.dataSource = nil
-        
-        let itemSize = CGSize(width: 200, height: 100)
-        let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = itemSize
-        items1.bindTo(collectionView!.rx.items(cellIdentifier: reuseIdentifier, cellType: CollectionViewCell.self)) 
-        { (row: Int, game: GameInfo, cell: CollectionViewCell) in 
-            cell.gameTitle?.text = "\(game.title)"            
+
+        let dataSource = RxCollectionViewSectionedReloadDataSource<GameSection>()
+ 
+        dataSource.configureCell = { ds, cv, ip, game in
+            let cell = cv.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: ip) as! CollectionViewCell
+            cell.gameTitle?.text = "\(game.title)"
+            return cell
         }
-        .addDisposableTo(disposeBag)
         
-        collectionView!.rx
-            .modelSelected(GameInfo.self)
-            .subscribe(onNext:  { game in
-                print("Tapped `\(game)`")
-            })
+        dataSource.supplementaryViewFactory = { (ds ,cv, kind, ip) in
+            let section = cv.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Section", for: ip) as! GameHeaderCollectionReusableView
+            
+            section.headerTitle!.text = "\(ds[ip.section].header)"
+            
+            return section
+        }        
+        let sections = [
+            GameSection(header: "First section", items: games1),
+            GameSection(header: "Second section", items: games2)
+        ]
+        
+        Observable.just(sections)
+            .bindTo(collectionView!.rx.items(dataSource: dataSource))
             .addDisposableTo(disposeBag)
     }
 
@@ -54,6 +82,27 @@ class CollectionViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    // MARK: UICollectionViewDataSource
+
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of items
+//        return 0
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+//    
+//        // Configure the cell
+//    
+//        return cell
+//    }
 
     // MARK: UICollectionViewDelegate
 

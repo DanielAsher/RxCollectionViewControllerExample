@@ -22,16 +22,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6a-1u-OKl">
-                                <rect key="frame" x="163" y="318" width="48" height="30"/>
-                                <state key="normal" title="Games"/>
+                                <rect key="frame" x="113" y="318" width="149" height="30"/>
+                                <state key="normal" title="GamesCollectionView"/>
                                 <connections>
                                     <segue destination="h46-es-p1v" kind="show" id="T4B-qn-LwS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npn-db-sZN">
+                                <rect key="frame" x="78" y="362" width="218" height="30"/>
+                                <state key="normal" title="GamesSectionedCollectionView"/>
+                                <connections>
+                                    <segue destination="LTC-eP-bmM" kind="show" id="kks-K6-XeI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Npn-db-sZN" firstAttribute="top" secondItem="B6a-1u-OKl" secondAttribute="bottom" constant="14" id="2cR-1o-nmu"/>
                             <constraint firstItem="B6a-1u-OKl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B6Q-Mv-cvK"/>
+                            <constraint firstItem="Npn-db-sZN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C1F-Mc-pza"/>
                             <constraint firstItem="B6a-1u-OKl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cd4-WN-uAo"/>
                         </constraints>
                     </view>
@@ -45,7 +54,15 @@
                 <viewControllerPlaceholder storyboardName="CollectionView" id="h46-es-p1v" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5W-Tm-kQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="38"/>
+            <point key="canvasLocation" x="755" y="18"/>
+        </scene>
+        <!--SectionedCollectionView-->
+        <scene sceneID="HeE-Iz-dl1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SectionedCollectionView" id="LTC-eP-bmM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPG-5L-8HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="62"/>
         </scene>
     </scenes>
 </document>

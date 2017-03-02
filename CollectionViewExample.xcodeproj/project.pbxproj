@@ -11,6 +11,15 @@
 		369EEC751E68C0C00059042C /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 369EEC4B1E68C0910059042C /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		369EEC781E68C0C00059042C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369EEC531E68C0910059042C /* RxCocoa.framework */; };
 		369EEC791E68C0C00059042C /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 369EEC531E68C0910059042C /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		369EEC801E68CE9A0059042C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 369EEC7D1E68CE9A0059042C /* .gitignore */; };
+		369EEC811E68CE9A0059042C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 369EEC7E1E68CE9A0059042C /* Cartfile */; };
+		369EEC821E68CE9A0059042C /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 369EEC7F1E68CE9A0059042C /* Cartfile.resolved */; };
+		369EECA01E68D0570059042C /* SectionedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EEC9F1E68D0570059042C /* SectionedCollectionViewController.swift */; };
+		369EECA21E68D07A0059042C /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EECA11E68D07A0059042C /* GameInfo.swift */; };
+		369EECA41E68D14F0059042C /* SectionedCollectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369EECA31E68D14F0059042C /* SectionedCollectionView.storyboard */; };
+		369EECA91E68D3BE0059042C /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369EEC901E68CFC00059042C /* RxDataSources.framework */; };
+		369EECAA1E68D3BE0059042C /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 369EEC901E68CFC00059042C /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		369EECAE1E68DB780059042C /* GameHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369EECAD1E68DB780059042C /* GameHeaderCollectionReusableView.swift */; };
 		36C0CBD51E689EB70087784E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C0CBD41E689EB70087784E /* AppDelegate.swift */; };
 		36C0CBD71E689EB70087784E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C0CBD61E689EB70087784E /* ViewController.swift */; };
 		36C0CBDA1E689EB70087784E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C0CBD81E689EB70087784E /* Main.storyboard */; };
@@ -187,6 +196,55 @@
 			remoteGlobalIDString = C80938F51B8A71760088E94D;
 			remoteInfo = "RxCocoa-iOS";
 		};
+		369EEC8F1E68CFC00059042C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8984C5A1C36AF35001E4272;
+			remoteInfo = "RxDataSources-iOS";
+		};
+		369EEC911E68CFC00059042C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9FCDA1631C3AF49A000F5F94;
+			remoteInfo = "RxDataSources-tvOS";
+		};
+		369EEC931E68CFC00059042C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8984C9B1C36B6FA001E4272;
+			remoteInfo = Example;
+		};
+		369EEC951E68CFC00059042C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8984CB11C36B723001E4272;
+			remoteInfo = ExampleUITests;
+		};
+		369EEC971E68CFC00059042C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8BB765B1C4C3DD4002B21C8;
+			remoteInfo = "Example-Carthage";
+		};
+		369EEC991E68CFC00059042C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C81905AE1DEA019100AE679C;
+			remoteInfo = Tests;
+		};
+		369EECAB1E68D3BE0059042C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C8984C591C36AF35001E4272;
+			remoteInfo = "RxDataSources-iOS";
+		};
 		36C0CBE61E689EB70087784E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 36C0CBC91E689EB70087784E /* Project object */;
@@ -210,6 +268,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				369EECAA1E68D3BE0059042C /* RxDataSources.framework in Embed Frameworks */,
 				369EEC791E68C0C00059042C /* RxCocoa.framework in Embed Frameworks */,
 				369EEC751E68C0C00059042C /* RxSwift.framework in Embed Frameworks */,
 			);
@@ -220,6 +279,14 @@
 
 /* Begin PBXFileReference section */
 		369EEC321E68C0910059042C /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
+		369EEC7D1E68CE9A0059042C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		369EEC7E1E68CE9A0059042C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		369EEC7F1E68CE9A0059042C /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxDataSources.xcodeproj; path = Carthage/Checkouts/RxDataSources/RxDataSources.xcodeproj; sourceTree = "<group>"; };
+		369EEC9F1E68D0570059042C /* SectionedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedCollectionViewController.swift; sourceTree = "<group>"; };
+		369EECA11E68D07A0059042C /* GameInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
+		369EECA31E68D14F0059042C /* SectionedCollectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SectionedCollectionView.storyboard; sourceTree = "<group>"; };
+		369EECAD1E68DB780059042C /* GameHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		36C0CBD11E689EB70087784E /* CollectionViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C0CBD41E689EB70087784E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C0CBD61E689EB70087784E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369EECA91E68D3BE0059042C /* RxDataSources.framework in Frameworks */,
 				369EEC781E68C0C00059042C /* RxCocoa.framework in Frameworks */,
 				369EEC741E68C0C00059042C /* RxSwift.framework in Frameworks */,
 			);
@@ -293,9 +361,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		369EEC7C1E68CE890059042C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				369EEC7D1E68CE9A0059042C /* .gitignore */,
+				369EEC7E1E68CE9A0059042C /* Cartfile */,
+				369EEC7F1E68CE9A0059042C /* Cartfile.resolved */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		369EEC841E68CFC00059042C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				369EEC901E68CFC00059042C /* RxDataSources.framework */,
+				369EEC921E68CFC00059042C /* RxDataSources.framework */,
+				369EEC941E68CFC00059042C /* Example.app */,
+				369EEC961E68CFC00059042C /* ExampleUITests.xctest */,
+				369EEC981E68CFC00059042C /* Example-Carthage.app */,
+				369EEC9A1E68CFC00059042C /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		36C0CBC81E689EB70087784E = {
 			isa = PBXGroup;
 			children = (
+				369EEC7C1E68CE890059042C /* Config */,
 				36C0CBD31E689EB70087784E /* CollectionViewExample */,
 				36C0CBE81E689EB70087784E /* CollectionViewExampleTests */,
 				36C0CBF31E689EB80087784E /* CollectionViewExampleUITests */,
@@ -326,6 +418,10 @@
 				36C0CC021E689F0D0087784E /* CollectionViewController.swift */,
 				36C0CC041E689F280087784E /* CollectionView.storyboard */,
 				36C0CCB01E68B8550087784E /* CollectionViewCell.swift */,
+				369EEC9F1E68D0570059042C /* SectionedCollectionViewController.swift */,
+				369EECA31E68D14F0059042C /* SectionedCollectionView.storyboard */,
+				369EECA11E68D07A0059042C /* GameInfo.swift */,
+				369EECAD1E68DB780059042C /* GameHeaderCollectionReusableView.swift */,
 			);
 			path = CollectionViewExample;
 			sourceTree = "<group>";
@@ -351,6 +447,7 @@
 		36C0CCA51E68A9B80087784E /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */,
 				369EEC321E68C0910059042C /* Rx.xcodeproj */,
 			);
 			name = Dependencies;
@@ -373,6 +470,7 @@
 			dependencies = (
 				369EEC771E68C0C00059042C /* PBXTargetDependency */,
 				369EEC7B1E68C0C00059042C /* PBXTargetDependency */,
+				369EECAC1E68D3BE0059042C /* PBXTargetDependency */,
 			);
 			name = CollectionViewExample;
 			productName = CollectionViewExample;
@@ -459,6 +557,10 @@
 				{
 					ProductGroup = 369EEC331E68C0910059042C /* Products */;
 					ProjectRef = 369EEC321E68C0910059042C /* Rx.xcodeproj */;
+				},
+				{
+					ProductGroup = 369EEC841E68CFC00059042C /* Products */;
+					ProjectRef = 369EEC831E68CFC00059042C /* RxDataSources.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -619,6 +721,48 @@
 			remoteRef = 369EEC721E68C0910059042C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		369EEC901E68CFC00059042C /* RxDataSources.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxDataSources.framework;
+			remoteRef = 369EEC8F1E68CFC00059042C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		369EEC921E68CFC00059042C /* RxDataSources.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxDataSources.framework;
+			remoteRef = 369EEC911E68CFC00059042C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		369EEC941E68CFC00059042C /* Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Example.app;
+			remoteRef = 369EEC931E68CFC00059042C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		369EEC961E68CFC00059042C /* ExampleUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ExampleUITests.xctest;
+			remoteRef = 369EEC951E68CFC00059042C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		369EEC981E68CFC00059042C /* Example-Carthage.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-Carthage.app";
+			remoteRef = 369EEC971E68CFC00059042C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		369EEC9A1E68CFC00059042C /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = 369EEC991E68CFC00059042C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -626,9 +770,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369EEC811E68CE9A0059042C /* Cartfile in Resources */,
+				369EEC821E68CE9A0059042C /* Cartfile.resolved in Resources */,
+				369EEC801E68CE9A0059042C /* .gitignore in Resources */,
 				36C0CBDF1E689EB70087784E /* LaunchScreen.storyboard in Resources */,
 				36C0CBDC1E689EB70087784E /* Assets.xcassets in Resources */,
 				36C0CBDA1E689EB70087784E /* Main.storyboard in Resources */,
+				369EECA41E68D14F0059042C /* SectionedCollectionView.storyboard in Resources */,
 				36C0CC051E689F280087784E /* CollectionView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,9 +803,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				36C0CC031E689F0D0087784E /* CollectionViewController.swift in Sources */,
+				369EECA01E68D0570059042C /* SectionedCollectionViewController.swift in Sources */,
 				36C0CBD71E689EB70087784E /* ViewController.swift in Sources */,
 				36C0CCB11E68B8560087784E /* CollectionViewCell.swift in Sources */,
 				36C0CBD51E689EB70087784E /* AppDelegate.swift in Sources */,
+				369EECAE1E68DB780059042C /* GameHeaderCollectionReusableView.swift in Sources */,
+				369EECA21E68D07A0059042C /* GameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +842,11 @@
 			isa = PBXTargetDependency;
 			name = "RxCocoa-iOS";
 			targetProxy = 369EEC7A1E68C0C00059042C /* PBXContainerItemProxy */;
+		};
+		369EECAC1E68D3BE0059042C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RxDataSources-iOS";
+			targetProxy = 369EECAB1E68D3BE0059042C /* PBXContainerItemProxy */;
 		};
 		36C0CBE71E689EB70087784E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
